@@ -9,4 +9,4 @@ from src.ingestion.product_loader import load_and_index_products, ensure_pinecon
 if __name__ == "__main__":
     ensure_pinecone_index_exists()
     load_and_index_products("data/products.csv")
-    print("🎉 Product ingestion complete!")
+    print(" Product ingestion complete!")

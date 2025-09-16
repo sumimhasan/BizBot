@@ -18,7 +18,7 @@ def clear_chat(session_id):
 
 # UI
 with gr.Blocks(title="BizBot — Your Shopping Assistant 🛍️") as demo:
-    gr.Markdown("# 🛍️ BizBot — Your AI Shopping Assistant")
+    gr.Markdown("#  BizBot — Your AI Shopping Assistant")
     gr.Markdown("Ask about products, prices, stock, or say _“Add it to my cart!”_")
 
     with gr.Row():
@@ -30,7 +30,7 @@ with gr.Blocks(title="BizBot — Your Shopping Assistant 🛍️") as demo:
 
     chatbot = gr.Chatbot(height=500, label="Chat with BizBot")
     msg = gr.Textbox(label="Type your question here...", placeholder="Do you have wireless earbuds under $150?")
-    clear_btn = gr.Button("🗑️ Clear Chat History")
+    clear_btn = gr.Button(" Clear Chat History")
 
     msg.submit(respond, [msg, chatbot, session_id], [msg, chatbot])
     clear_btn.click(clear_chat, session_id, outputs=[chatbot, gr.Textbox(label="Status", interactive=False)])

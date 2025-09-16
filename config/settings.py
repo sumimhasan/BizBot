@@ -24,9 +24,9 @@ class Settings:
     # Validation
     def validate(self):
         if not self.OPENAI_API_KEY:
-            raise ValueError("❌ OPENAI_API_KEY is missing in .env")
+            raise ValueError("X, OPENAI_API_KEY is missing in .env")
         if not self.PINECONE_API_KEY:
-            raise ValueError("❌ PINECONE_API_KEY is missing in .env")
+            raise ValueError("X, PINECONE_API_KEY is missing in .env")
 
 settings = Settings()
 settings.validate()

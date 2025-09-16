@@ -13,28 +13,28 @@ def ensure_pinecone_index_exists():
     """Create Pinecone index if it doesn't exist."""
     pc = Pinecone(api_key=settings.PINECONE_API_KEY)
     if settings.INDEX_NAME not in pc.list_indexes().names():
-        print(f"🆕 Creating Pinecone index: {settings.INDEX_NAME}")
+        print(f"Creating Pinecone index: {settings.INDEX_NAME}")
         pc.create_index(
             name=settings.INDEX_NAME,
             dimension=settings.DIMENSION,
             metric="cosine",
             spec=ServerlessSpec(cloud="aws", region="us-east-1")
         )
-        print(f"✅ Index '{settings.INDEX_NAME}' created.")
+        print(f"Index '{settings.INDEX_NAME}' created.")
     else:
-        print(f"✅ Index '{settings.INDEX_NAME}' already exists.")
+        print(f"Index '{settings.INDEX_NAME}' already exists.")
 
 def load_and_index_products(csv_path: str = "data/products.csv"):
     """Load products from CSV, split, embed, and store in Pinecone."""
     # Load
     loader = CSVLoader(file_path=csv_path)
     docs = loader.load()
-    print(f"📄 Loaded {len(docs)} product records.")
+    print(f" Loaded {len(docs)} product records.")
 
     # Split
     splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
     splits = splitter.split_documents(docs)
-    print(f"✂️  Split into {len(splits)} chunks.")
+    print(f" Split into {len(splits)} chunks.")
 
     # Embed & Store
     embeddings = OpenAIEmbeddings(model=settings.EMBEDDING_MODEL)
@@ -43,7 +43,7 @@ def load_and_index_products(csv_path: str = "data/products.csv"):
         embedding=embeddings,
         index_name=settings.INDEX_NAME
     )
-    print(f"✅ Indexed {len(splits)} chunks into Pinecone.")
+    print(f" Indexed {len(splits)} chunks into Pinecone.")
     return vectorstore
 
 if __name__ == "__main__":
