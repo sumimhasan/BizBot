@@ -14,10 +14,10 @@ def clear_chat(session_id):
     if not session_id.strip():
         session_id = "default"
     clear_session_history(session_id)
-    return [], f"🧹 Cleared chat history for session: {session_id}"
+    return [], f"Cleared chat history for session: {session_id}"
 
 # UI
-with gr.Blocks(title="BizBot — Your Shopping Assistant 🛍️") as demo:
+with gr.Blocks(title="BizBot — Your Shopping Assistant ") as demo:
     gr.Markdown("#  BizBot — Your AI Shopping Assistant")
     gr.Markdown("Ask about products, prices, stock, or say _“Add it to my cart!”_")
 

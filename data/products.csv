@@ -1,5 +1,5 @@
 name,description,price,category,in_stock,product_url
-Sony WF-C500,"Wireless earbuds, noise isolation, 20hr battery, IPX4 water resistant.",129.99,Electronics,true,https://shop.example.com/sony-wfc500
+Sony WF-C500,"Wirebuds, noise isolation, 20hr battery, IPX4 water resistant.",129.99,Electronics,true,https://shop.example.com/sony-wfc500
 Anker Soundcore Life P3,"Active Noise Cancellation, 35hr playtime, wireless charging case.",139.99,Electronics,true,https://shop.example.com/anker-p3
 Apple AirPods Pro,"Active Noise Cancellation, Transparency mode, MagSafe case.",249.99,Electronics,false,https://shop.example.com/airpods-pro
 Jabra Elite 3,"Compact design, customizable EQ, IP55 water/dust resistant.",99.99,Electronics,true,https://shop.example.com/jabra-elite3
