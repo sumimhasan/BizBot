@@ -12,12 +12,14 @@
 
 ## 🚀 Quick Start
 
+```
 1. Clone repo
-2. `pip install -r requirements.txt`
-3. Set `.env` with your API keys
-4. Ingest data: `python scripts/ingest_data.py`
-5. Launch UI: `python app/gradio_ui.py`
-6. Chat at `http://localhost:7860`
+2. pip install -r requirements.txt
+3. Set .env with your API keys
+4. Ingest data: python scripts/ingest_data.py
+5. Launch UI: python app/gradio_ui.py
+6. Chat at http://localhost:7860
+```
 
 ## 💬 Sample Queries
 
@@ -35,4 +37,4 @@
 
 ---
 
-✨ Built for developers, founders, and innovators.
+# Built for developers, founders, and innovators.
